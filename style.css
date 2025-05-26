@@ -87,14 +87,6 @@ main {
   box-shadow: 0 0 12px rgba(0,0,0,0.1);
 }
 
-/* Recommendation images */
-.recommendation img {
-  width: 240px;
-  margin: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
 /* Team Section */
 .team {
   display: flex;
@@ -166,4 +158,32 @@ main {
   .recommendation img {
     width: 90vw;
   }
+  /* Limit recommendation images size */
+.recommendation img {
+  max-width: 300px;   /* maximum width */
+  width: 100%;        /* responsive: fill container but not exceed max */
+  height: auto;       /* keep aspect ratio */
+  margin: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: block;
+}
+
+/* Team member images */
+.team-member img {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* General images on the homepage (if any) */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 }
