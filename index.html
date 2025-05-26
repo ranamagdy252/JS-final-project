@@ -2,33 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Travel Explorer - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Recommender</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Navigation bar -->
-  <nav>
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-    <div class="nav-search">
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="nav-right">
       <input type="text" id="searchInput" placeholder="Search destinations..." />
       <button id="searchBtn">Search</button>
       <button id="clearBtn">Clear</button>
     </div>
   </nav>
-
-  <main>
-    <header>
-      <h1>Welcome to Travel Explorer</h1>
-      <p>Your ultimate guide to personalized travel recommendations — explore beaches, temples, countries and more!</p>
-    </header>
-
-    <section id="recommendation" class="recommendation"></section>
-  </main>
+  <header class="hero">
+    <h1>Welcome to Travel Recommender</h1>
+    <p>Discover your next unforgettable trip based on what you love! Whether you're looking for a sunny beach, a historic temple, or exploring new countries — we’ve got suggestions tailored just for you.</p>
+  </header>
+  <section id="recommendation" class="recommendation"></section>
 
   <script src="script.js"></script>
 </body>
