@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const data = {
     beach: [
-      { name: "Bora Bora", img: "images/bora-bora.jpg" },
+      { name: "Bora Bora", img: "images/beach.jpg" },
       { name: "Maldives", img: "images/maldives.jpg" }
     ],
     temple: [
-      { name: "Angkor Wat", img: "images/angkor-wat.jpg" },
-      { name: "Golden Temple", img: "images/golden-temple.jpg" }
+      { name: "Angkor Wat", img: "images/italy.jpg" },
+      { name: "Golden Temple", img: "images/amalfi.jpg" }
     ],
     country: [
       { name: "Japan", img: "images/japan.jpg" },
