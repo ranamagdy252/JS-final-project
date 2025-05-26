@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -15,53 +15,18 @@
     </ul>
   </nav>
 
-  <main>
+  <main class="about">
     <h1>About Travel Explorer</h1>
-    <p>We help travelers find the perfect destination through personalized suggestions and rich content.</p>
-    <h2>Meet the Team</h2>
+    <p>Travel Explorer is your companion in discovering destinations that match your travel dreams. Our goal is to provide personalized recommendations that are not only inspiring but also informative.</p>
+
+    <h2>Meet the Creator</h2>
     <div class="team">
+      <img src="images/creator.jpg" alt="Creator" class="profile" />
       <div>
-        <img src="images/creator.jpg" alt="Creator" />
-        <p>Created by [Your Name], a passionate travel and web enthusiast.</p>
+        <h3>[Your Name]</h3>
+        <p>A passionate traveler and frontend developer dedicated to helping others plan unforgettable trips with the help of interactive, well-designed web tools.</p>
       </div>
     </div>
   </main>
 </body>
 </html>
-
-<!-- contact.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <h1>Contact Us</h1>
-    <form onsubmit="submitForm(event)">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </main>
-  <script>
-    function submitForm(e) {
-      e.preventDefault();
-      alert("Message Sent!");
-    }
-  </script>
-</body>
-</html>
-
