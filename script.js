@@ -1,29 +1,56 @@
-function showRecommendation(type) {
-  const rec = document.getElementById('recommendation');
-  let content = '';
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
+const clearBtn = document.getElementById("clearBtn");
+const recommendationSection = document.getElementById("recommendation");
 
-  if (type === 'beach') {
-    content = `
-      <h3>Top Beaches</h3>
-      <img src="images/amalfi.jpg" alt="Beach 1" />
-      <img src="images/maldives.jpg" alt="Beach 2" />
-      <p>Enjoy serene coastlines and turquoise waters.</p>
-    `;
-  } else if (type === 'temple') {
-    content = `
-      <h3>Famous Temples</h3>
-      <img src="images/italy.jpg" alt="Temple 1" />
-      <img src="images/italy.jpg" alt="Temple 2" />
-      <p>Discover ancient architecture and spiritual sites.</p>
-    `;
-  } else if (type === 'country') {
-    content = `
-      <h3>Explore Japan</h3>
-      <img src="images/japan.jpg" alt="Japan 1" />
-      <img src="images/beach.jpg" alt="Japan 2" />
-      <p>From cherry blossoms to high-tech cities, Japan offers a mix of tradition and innovation.</p>
-    `;
+// Sample data
+const data = {
+  beach: [
+    { name: "Bora Bora", img: "images/bora-bora.jpg" },
+    { name: "Maldives", img: "images/maldives.jpg" }
+  ],
+  temple: [
+    { name: "Angkor Wat", img: "images/angkor-wat.jpg" },
+    { name: "Golden Temple", img: "images/golden-temple.jpg" }
+  ],
+  country: [
+    { name: "Japan", img: "images/japan.jpg" },
+    { name: "Italy", img: "images/italy.jpg" }
+  ]
+};
+
+function showRecommendations(type) {
+  recommendationSection.innerHTML = "";
+  if (!data[type]) {
+    recommendationSection.textContent = "No recommendations found.";
+    return;
   }
-
-  rec.innerHTML = content;
+  data[type].forEach(dest => {
+    const card = document.createElement("div");
+    card.innerHTML = `
+      <h3>${dest.name}</h3>
+      <img src="${dest.img}" alt="${dest.name}" />
+    `;
+    recommendationSection.appendChild(card);
+  });
 }
+
+// Event listeners
+searchBtn.addEventListener("click", () => {
+  const query = searchInput.value.toLowerCase();
+
+  if (query.includes("beach")) {
+    showRecommendations("beach");
+  } else if (query.includes("temple")) {
+    showRecommendations("temple");
+  } else if (query.includes("country")) {
+    showRecommendations("country");
+  } else {
+    recommendationSection.textContent = "Try searching for 'beach', 'temple', or 'country'.";
+  }
+});
+
+clearBtn.addEventListener("click", () => {
+  searchInput.value = "";
+  recommendationSection.innerHTML = "";
+});

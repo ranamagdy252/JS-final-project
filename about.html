@@ -3,30 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us</title>
+  <title>About Us - Travel Explorer</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Navigation bar -->
   <nav>
-    <ul>
+    <ul class="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
+    <div class="nav-search">
+      <input type="text" id="searchInput" placeholder="Search destinations..." />
+      <button id="searchBtn">Search</button>
+      <button id="clearBtn">Clear</button>
+    </div>
   </nav>
 
-  <main class="about">
+  <main>
     <h1>About Travel Explorer</h1>
-    <p>Travel Explorer is your companion in discovering destinations that match your travel dreams. Our goal is to provide personalized recommendations that are not only inspiring but also informative.</p>
+    <p>Travel Explorer is dedicated to providing personalized travel recommendations to help you find your dream destinations.</p>
 
-    <h2>Meet the Creator</h2>
+    <h2>Meet the Team</h2>
     <div class="team">
-      <img src="images/creator.jpg" alt="Creator" class="profile" />
-      <div>
-        <h3>[Your Name]</h3>
-        <p>A passionate traveler and frontend developer dedicated to helping others plan unforgettable trips with the help of interactive, well-designed web tools.</p>
+      <div class="team-member">
+        <img src="images/member1.jpg" alt="Alice" />
+        <h3>Alice Johnson</h3>
+        <p>Founder & Travel Enthusiast</p>
+      </div>
+      <div class="team-member">
+        <img src="images/member2.jpg" alt="Bob" />
+        <h3>Bob Smith</h3>
+        <p>Lead Developer</p>
       </div>
     </div>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

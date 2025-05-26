@@ -3,30 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Travel Explorer</title>
+  <title>Travel Explorer - Home</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Navigation bar -->
   <nav>
-    <ul>
+    <ul class="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
+    <div class="nav-search">
+      <input type="text" id="searchInput" placeholder="Search destinations..." />
+      <button id="searchBtn">Search</button>
+      <button id="clearBtn">Clear</button>
+    </div>
   </nav>
 
-  <header>
-    <h1>Welcome to Travel Explorer</h1>
-    <p>Discover your next destination based on your preferences.</p>
-  </header>
-
   <main>
-    <section class="buttons">
-      <h2>Choose Your Recommendation</h2>
-      <button onclick="showRecommendation('beach')">Beach</button>
-      <button onclick="showRecommendation('temple')">Temple</button>
-      <button onclick="showRecommendation('country')">Country</button>
-    </section>
+    <header>
+      <h1>Welcome to Travel Explorer</h1>
+      <p>Your ultimate guide to personalized travel recommendations — explore beaches, temples, countries and more!</p>
+    </header>
 
     <section id="recommendation" class="recommendation"></section>
   </main>
