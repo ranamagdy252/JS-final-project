@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showRecommendations(type) {
     if (!recommendationSection) return;
-
     recommendationSection.innerHTML = "";
+
     if (!data[type]) {
       recommendationSection.textContent = "No recommendations found.";
       return;
